@@ -1,6 +1,6 @@
-#Shift Gig Wrontend Example
+# ShiftGig Frontend Example
 
 
-### Testing 
+#### Testing 
 * Enzyme - Jest
   - `npm test -- -u`
