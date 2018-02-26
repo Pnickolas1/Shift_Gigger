@@ -11,18 +11,18 @@ import reducer from './reducers'
 import {createStore, applyMiddleware} from 'redux'
 
 const store = createStore(
-    reducer,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-    applyMiddleware(thunk)
-  )
+  reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  applyMiddleware(thunk)
+)
 
-  store.dispatch(loadAllCategories())
+store.dispatch(loadAllCategories())
   
-  ReactDOM.render(
-    <Provider store={store}>
-      <BrowserRouter>
-        {routes}
-      </BrowserRouter>
-    </Provider>
-    , document.getElementById('root'));
-  registerServiceWorker();
+ReactDOM.render(
+  <Provider store={store}>
+    <BrowserRouter>
+      {routes}
+    </BrowserRouter>
+  </Provider>
+  , document.getElementById('root'));
+registerServiceWorker();

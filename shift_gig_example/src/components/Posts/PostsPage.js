@@ -6,7 +6,7 @@ import PostList from "./PostList";
 import * as postActions from "../../actions/posts";
 import * as commentActions from "../../actions/comments";
 import * as helpers from "../../utils/helpers";
-import Modal from  'react-modal'
+import Modal from 'react-modal'
 const shortid = require('shortid')
 
 
@@ -76,7 +76,7 @@ class PostsPage extends Component {
     let post = this.state.newPost;
     post['id'] = shortid.generate()
     post['timestamp'] = Date.now()
-    post['author'] = 'LateRndPick'
+    post['author'] = 'Shiftgig1'
     post['voteScore'] = 1
     this.props.actions.createPost(post)
     this.setState({
@@ -125,7 +125,7 @@ class PostsPage extends Component {
         </div>
 
 
-        <Modal isOpen={this.state.openModal} contentLabel="Create Modal">
+        <Modal ariaHideApp={false} isOpen={this.state.openModal} contentLabel="Create Modal">
           <i className="fa fa-close pull-right" onClick={this.closeModal}></i>
           <div className="row">
             <div className="col-md-12">

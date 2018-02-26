@@ -3,7 +3,7 @@ import moment from 'moment'
 const shortid = require('shortid')
 
 export function sort(state, type='voteScore'){
-    return _.orderBy(state, type, 'asc')
+    return _.orderBy(state, type, 'dsc')
 }
 
 

@@ -13,7 +13,7 @@ class Vote extends React.Component {
       case "comment":
         return this.props.actions.addCommentVote(this.props.id)
       default:
-        console.log("No proper vote method call!")
+        console.log("No proper add vote method call!")
     }
   }
 
@@ -25,7 +25,7 @@ class Vote extends React.Component {
       case "comment":
         return this.props.actions.subtractCommentVote(this.props.id)
       default:
-        console.log("No proper vote method call!")
+        console.log("No proper minus vote method call!")
     }
   }
 
@@ -39,6 +39,7 @@ class Vote extends React.Component {
 
 
   render () {
+    console.log('Vote Component',this)
     return (
       <div className="row">
         <div className="col-md-12">

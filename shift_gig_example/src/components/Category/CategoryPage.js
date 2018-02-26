@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {Navbar} from "../Navbar";
 import {bindActionCreators} from "redux";
-import * as actions from '../../actions/posts'
+import * as postActions from '../../actions/posts'
 import {connect} from "react-redux";
 import * as helpers from "../../utils/helpers";
 import PostList from "../Posts/PostList";
@@ -46,7 +46,7 @@ class CategoryPage extends Component {
               <label className="control-label">Categories</label>
               <div className="alert alert-info" role="alert">
                 {this.props.categories.map(category => (
-                  <a href={"/"+category.path} style={{textDecoration:null}} key={category.path} className="margin-15"><h5 className="badge badge-secondary" style={{fontSize: 16}}>{category.name}</h5></a>
+                  <a href={"/"+ category.path} key={category.path} className="margin-15"><h5 className="badge badge-secondary" style={{fontSize: 16}}>{category.name}</h5></a>
                 ))}
               </div>
             </div>
@@ -80,7 +80,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return {actions: bindActionCreators(actions, dispatch)}
+  return {actions: bindActionCreators(postActions, dispatch)}
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CategoryPage);

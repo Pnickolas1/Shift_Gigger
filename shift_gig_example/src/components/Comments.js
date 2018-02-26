@@ -29,7 +29,7 @@ class Comments extends React.Component {
       body: e.target.comment.value,
       parentId: this.props.post.id,
       timestamp: Date.now(),
-      author: 'LateRndPick',
+      author: 'Shiftgig1',
       voteScore: 1
     }
     this.props.actions.addNewComment(comment)
@@ -133,17 +133,17 @@ class Comments extends React.Component {
                 </div>
               </form>
 
-              <Modal isOpen={this.state.openModal} contentLabel="Create Modal">
+              <Modal ariaHideApp={false} isOpen={this.state.openModal} contentLabel="Create Modal">
                 <i className="fa fa-close pull-right" onClick={this.closeModal}></i>
                 <div className="row">
                   <div className="col-md-12">
-                    <h4>Edit Post</h4>
+                    <h4>Edit Comment</h4>
                     <form onSubmit={this.saveComment}>
                       <div className="form-group">
                         <label>Body</label>
                         <textarea className="form-control" id="body" placeholder="whats on your mind?"  onChange={this.handleChange} value={this.state.editComment.body} required={true}/>
                       </div>
-                     <button type="submit" className="btn btn-primary">Update Comment</button>
+                     <button type="submit" className="btn btn-primary">Edit Comment</button>
                     </form>
                   </div>
                 </div>

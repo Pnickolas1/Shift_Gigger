@@ -118,7 +118,7 @@ class Post extends React.Component {
                 <div className="row">
                   <div className="col-md-2">
                     <p style={{fontSize:"16px", marginBottom:0 }}>votes: {this.props.post.voteScore}</p>
-                    <Vote size={24} id={this.props.post.id} type={"post"} />
+                    <Vote size={25} id={this.props.post.id} type={"post"} />
                   </div>
                 </div>
                 <div className="row margin-top-10">
@@ -134,7 +134,7 @@ class Post extends React.Component {
               </div>: ""}
             </div>
 
-            <Modal isOpen={this.state.openModal} contentLabel="Create Modal">
+            <Modal ariaHideApp={false} isOpen={this.state.openModal} contentLabel="Create Modal">
               <i className="fa fa-close pull-right" onClick={this.closeModal}></i>
               <div className="row">
                 <div className="col-md-12">
