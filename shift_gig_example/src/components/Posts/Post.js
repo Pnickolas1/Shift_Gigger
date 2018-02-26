@@ -30,7 +30,7 @@ class Post extends React.Component {
     categories: [],
     openModal: false
   }
-  componentWillMount(){
+  componentDidMount(){
     this.props.actions.loadCommentsById(this.props.post.id)
   }
 
@@ -105,7 +105,7 @@ class Post extends React.Component {
                 <h4 className="card-title">
                   <div className="row">
                     <div className="col-md-6">
-                      <a href={'/'+this.props.post.category+'/'+this.props.post.id}>{this.props.post.title}</a> <span className="text-muted" style={{fontSize: 16}}>{helpers.time(this.props.post.timestamp)}</span>
+                      <a href={'/'+ this.props.post.category +'/'+this.props.post.id}>{this.props.post.title}</a> <span className="text-muted" style={{fontSize: 16}}>{helpers.time(this.props.post.timestamp)}</span>
                     </div>
                     <div className="col-md-2 ml-md-auto">
                       <button className="btn btn-info btn-sm margin-15" id={this.props.post.id} onClick={this.editPost}><i className="fa fa-pencil"></i></button>

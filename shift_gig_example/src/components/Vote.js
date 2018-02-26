@@ -39,7 +39,6 @@ class Vote extends React.Component {
 
 
   render () {
-    console.log('Vote Component',this)
     return (
       <div className="row">
         <div className="col-md-12">

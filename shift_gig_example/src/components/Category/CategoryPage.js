@@ -21,6 +21,7 @@ class CategoryPage extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    console.log(nextProps);
     this.setState({
       posts: nextProps.posts,
       categories: nextProps.categories,
@@ -37,6 +38,7 @@ class CategoryPage extends Component {
   }
 
   render() {
+    console.log('match', this.props.match)
     return (
       <div className="container-fluid" style={{padding:0}}>
         <Navbar/>
