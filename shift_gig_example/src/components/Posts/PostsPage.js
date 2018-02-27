@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Navbar} from "../Navbar";
+import Navbar from "../Navbar";
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
 import PostList from "./PostList";
