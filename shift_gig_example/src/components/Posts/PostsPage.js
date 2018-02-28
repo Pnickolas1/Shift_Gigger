@@ -11,8 +11,8 @@ const shortid = require('shortid')
 
 
 class PostsPage extends Component {
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
     this.changeSortMethod = this.changeSortMethod.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.state = {

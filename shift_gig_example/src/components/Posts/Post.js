@@ -13,8 +13,8 @@ import {Redirect} from 'react-router'
 
 class Post extends React.Component {
 
-  constructor(props, context) { 
-    super(props, context);
+  constructor(props) { 
+    super(props);
     this.deletePost = this.deletePost.bind(this);
     this.closeModal = this.closeModal.bind(this)
     this.handleChange = this.handleChange.bind(this)

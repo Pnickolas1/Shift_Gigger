@@ -7,8 +7,8 @@ import * as helpers from "../../utils/helpers";
 import PostList from "../Posts/PostList";
 
 class CategoryPage extends Component {
-  constructor(props,context) {
-    super(props, context)
+  constructor(props) {
+    super(props)
     this.changeSortMethod = this.changeSortMethod.bind(this)
   }
   state = {
