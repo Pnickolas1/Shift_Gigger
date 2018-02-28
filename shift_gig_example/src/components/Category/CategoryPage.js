@@ -15,7 +15,7 @@ class CategoryPage extends Component {
     sortBy: 'voteScore'
   }
 
-  componentWillMount() {
+  componentDidMount() {
     let category = this.props.match.params.category
     this.props.actions.loadCategoriesWisePosts(category)
   }
