@@ -8,7 +8,7 @@ import Post from "./Post";
 
 class PostPage extends Component {
 
-  componentWillMount() {
+  componentDidMount() {
     let postId = this.props.match.params.id
     this.props.actions.loadPostById(postId)
     this.props.actions.loadCommentsById(postId)

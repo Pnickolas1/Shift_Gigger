@@ -26,7 +26,7 @@ class PostsPage extends Component {
     }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.actions.loadPosts()
   }
 
@@ -77,7 +77,7 @@ class PostsPage extends Component {
     post['id'] = shortid.generate()
     post['timestamp'] = Date.now()
     post['author'] = 'Shiftgig1'
-    post['voteScore'] = 1
+    post['voteScore'] = 0
     this.props.actions.createPost(post)
     this.setState({
       newPost: {
