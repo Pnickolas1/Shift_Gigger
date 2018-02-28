@@ -18,6 +18,6 @@
       - run `npm test -- -u` in command line
 
 
-* dev server can be cloned here:
+### dev server can be cloned here:
  1. git clone the below
   - `https://github.com/Pnickolas1/reactnd-project-readable-starter`
