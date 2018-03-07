@@ -8,7 +8,6 @@ import Vote from "../Vote";
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
 import Modal from 'react-modal'
-
 import {Redirect} from 'react-router'
 
 class Post extends React.Component {
@@ -105,8 +104,8 @@ class Post extends React.Component {
                 <h4 className="card-title">
                   <div className="row">
                     <div className="col-md-6">
-                      <a href={'/'+ this.props.post.category +'/'+this.props.post.id}>{this.props.post.title}</a> <span className="text-muted" style={{fontSize: 16}}>{helpers.time(this.props.post.timestamp)}</span>
-                    </div>
+                    <a href={'/'+ this.props.post.category +'/'+this.props.post.id}>{this.props.post.title}</a> <span className="text-muted" style={{fontSize: 16}}>{helpers.time(this.props.post.timestamp)}</span>
+                     </div>
                     <div className="col-md-2 ml-md-auto">
                       <button className="btn btn-info btn-sm margin-15" id={this.props.post.id} onClick={this.editPost}><i className="fa fa-pencil"></i></button>
                       <button className="btn btn-danger btn-sm margin-15" id={this.props.post.id} onClick={this.deletePost}>Delete</button>

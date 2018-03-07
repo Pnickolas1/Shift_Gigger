@@ -7,7 +7,7 @@ import * as postActions from "../../actions/posts";
 import * as commentActions from "../../actions/comments";
 import * as helpers from "../../utils/helpers";
 import Modal from 'react-modal'
-const shortid = require('shortid')
+import shortid from 'shortid'
 
 
 class PostsPage extends Component {

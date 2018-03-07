@@ -21,7 +21,7 @@ class CategoryPage extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps);
+    console.log('component will recieve props fired: ',nextProps);
     this.setState({
       posts: nextProps.posts,
       categories: nextProps.categories,
